@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeui_3.ttf">
+            <string>SegoeUI</string>
+        </array>
+        <array key="seguisb_3.ttf">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="74" id="KGk-i7-Jjw" customClass="WalletCell" customModule="ArabeSque" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="73.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create An Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-DN-6Fq">
+                        <rect key="frame" x="9" y="4" width="101.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Nfd-Bm-y5A"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event zxyz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7O-Ej-fIr">
+                        <rect key="frame" x="13" y="27" width="127" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TD:wtyeqweyqw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfb-Ue-MjU">
+                        <rect key="frame" x="11" y="48" width="127" height="21"/>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 Feb 2108" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5s-vc-9i3">
+                        <rect key="frame" x="151" y="22" width="70" height="17.5"/>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-iV-Mi4">
+                        <rect key="frame" x="155" y="41.5" width="64" height="22.5"/>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="450 Coins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mN-V0-mtZ">
+                        <rect key="frame" x="256" y="20" width="38" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="1gE-5N-cJk"/>
+                            <constraint firstAttribute="width" constant="38" id="2JJ-kh-TEk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earn" translatesAutoresizingMaskIntoConstraints="NO" id="mCN-7A-69x">
+                        <rect key="frame" x="298" y="33" width="10.5" height="10.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10.5" id="L3C-Vd-Zl0"/>
+                            <constraint firstAttribute="height" constant="10.5" id="Ncd-r9-JLc"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cj3-iV-Mi4" firstAttribute="width" secondItem="U5s-vc-9i3" secondAttribute="width" constant="-6" id="6KH-BY-s5V"/>
+                    <constraint firstItem="U5s-vc-9i3" firstAttribute="leading" secondItem="cOX-DN-6Fq" secondAttribute="trailing" constant="40.5" id="82k-Lx-p0A"/>
+                    <constraint firstItem="cOX-DN-6Fq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="8Wg-5p-vlM"/>
+                    <constraint firstItem="g7O-Ej-fIr" firstAttribute="height" secondItem="cOX-DN-6Fq" secondAttribute="height" id="A0b-Wi-uBs"/>
+                    <constraint firstItem="g7O-Ej-fIr" firstAttribute="width" secondItem="cOX-DN-6Fq" secondAttribute="width" constant="25.5" id="Azi-Bj-yez"/>
+                    <constraint firstItem="g7O-Ej-fIr" firstAttribute="top" secondItem="cOX-DN-6Fq" secondAttribute="bottom" constant="2" id="Fg3-oy-5h7"/>
+                    <constraint firstItem="U5s-vc-9i3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="GeV-CJ-LxQ"/>
+                    <constraint firstItem="Bfb-Ue-MjU" firstAttribute="top" secondItem="g7O-Ej-fIr" secondAttribute="bottom" id="K8n-i4-9ID"/>
+                    <constraint firstItem="cj3-iV-Mi4" firstAttribute="leading" secondItem="U5s-vc-9i3" secondAttribute="leading" constant="4" id="LkT-9A-eJj"/>
+                    <constraint firstAttribute="trailing" secondItem="mCN-7A-69x" secondAttribute="trailing" constant="11.5" id="Nlj-0M-ca2"/>
+                    <constraint firstItem="g7O-Ej-fIr" firstAttribute="leading" secondItem="cOX-DN-6Fq" secondAttribute="leading" constant="4" id="V1c-St-lzj"/>
+                    <constraint firstItem="Bfb-Ue-MjU" firstAttribute="leading" secondItem="g7O-Ej-fIr" secondAttribute="leading" constant="-2" id="fSq-MJ-VhC"/>
+                    <constraint firstItem="cOX-DN-6Fq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="faw-vx-ucB"/>
+                    <constraint firstItem="Bfb-Ue-MjU" firstAttribute="width" secondItem="g7O-Ej-fIr" secondAttribute="width" id="fyo-c2-GqO"/>
+                    <constraint firstItem="cj3-iV-Mi4" firstAttribute="height" secondItem="U5s-vc-9i3" secondAttribute="height" constant="5" id="i1U-Hs-VKp"/>
+                    <constraint firstItem="2mN-V0-mtZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="kCj-fV-bsc"/>
+                    <constraint firstItem="mCN-7A-69x" firstAttribute="leading" secondItem="2mN-V0-mtZ" secondAttribute="trailing" constant="4" id="lOZ-Ea-32g"/>
+                    <constraint firstItem="Bfb-Ue-MjU" firstAttribute="height" secondItem="g7O-Ej-fIr" secondAttribute="height" id="lq1-HM-xEC"/>
+                    <constraint firstItem="cj3-iV-Mi4" firstAttribute="top" secondItem="U5s-vc-9i3" secondAttribute="bottom" constant="2" id="uiG-NH-i07"/>
+                    <constraint firstItem="U5s-vc-9i3" firstAttribute="leading" secondItem="g7O-Ej-fIr" secondAttribute="trailing" constant="11" id="yh4-Uf-eMj"/>
+                    <constraint firstItem="mCN-7A-69x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="z93-EC-bpg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="33" y="92"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="earn" width="10" height="10"/>
+    </resources>
+</document>

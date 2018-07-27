@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeui_3.ttf">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewUserCell" rowHeight="220" id="KGk-i7-Jjw" customClass="NewUserCell" customModule="ArabeSque" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="219.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyD-7a-Ufr">
+                        <rect key="frame" x="10" y="23" width="299" height="40"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.20784313730000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Aam-0s-lDl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
+                        <state key="normal" title="Sign In">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsX-OM-ANM">
+                        <rect key="frame" x="117" y="73" width="74" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="2Fj-rB-KrD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sia-rn-Xuz">
+                        <rect key="frame" x="58" y="105" width="209" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="jYl-ZC-NRR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                        <state key="normal" title="Register Yourself">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRf-af-AHN">
+                        <rect key="frame" x="40" y="166" width="69" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="LNQ-Mk-tYM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                        <state key="normal" title="About Us">
+                            <color key="titleColor" red="0.0" green="0.76470588240000004" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1u-J8-znz">
+                        <rect key="frame" x="114" y="165" width="80" height="30"/>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                        <state key="normal" title="Contact us">
+                            <color key="titleColor" red="0.0" green="0.76470588240000004" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkc-zF-mJ8">
+                        <rect key="frame" x="199" y="165" width="82" height="30"/>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                        <state key="normal" title="Terms &amp; Policy">
+                            <color key="titleColor" red="0.0" green="0.76470588240000004" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NRf-af-AHN" firstAttribute="height" secondItem="B1u-J8-znz" secondAttribute="height" id="07P-Ps-5VD"/>
+                    <constraint firstAttribute="trailing" secondItem="mkc-zF-mJ8" secondAttribute="trailing" constant="39" id="9XW-Bf-1ng"/>
+                    <constraint firstItem="mkc-zF-mJ8" firstAttribute="height" secondItem="B1u-J8-znz" secondAttribute="height" id="ErI-EV-KiI"/>
+                    <constraint firstItem="B1u-J8-znz" firstAttribute="leading" secondItem="NRf-af-AHN" secondAttribute="trailing" constant="5" id="Iwi-G3-Xaq"/>
+                    <constraint firstItem="NRf-af-AHN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="L3n-2v-Czy"/>
+                    <constraint firstItem="Sia-rn-Xuz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="58" id="LdQ-mU-QcS"/>
+                    <constraint firstItem="HsX-OM-ANM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="117" id="PBb-rn-Ooa"/>
+                    <constraint firstItem="wyD-7a-Ufr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Pph-Le-6bX"/>
+                    <constraint firstItem="HsX-OM-ANM" firstAttribute="top" secondItem="wyD-7a-Ufr" secondAttribute="bottom" constant="10" id="UZh-hI-IRq"/>
+                    <constraint firstItem="wyD-7a-Ufr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="XVl-vT-bsG"/>
+                    <constraint firstItem="mkc-zF-mJ8" firstAttribute="leading" secondItem="B1u-J8-znz" secondAttribute="trailing" constant="5" id="bk9-08-Gwd"/>
+                    <constraint firstItem="Sia-rn-Xuz" firstAttribute="top" secondItem="HsX-OM-ANM" secondAttribute="bottom" constant="11" id="dR6-0f-9fL"/>
+                    <constraint firstItem="NRf-af-AHN" firstAttribute="top" secondItem="B1u-J8-znz" secondAttribute="top" constant="1" id="foE-Ja-i3A"/>
+                    <constraint firstAttribute="trailing" secondItem="HsX-OM-ANM" secondAttribute="trailing" constant="129" id="j1f-f3-XiA"/>
+                    <constraint firstItem="mkc-zF-mJ8" firstAttribute="width" secondItem="B1u-J8-znz" secondAttribute="width" constant="2" id="njG-8m-0hu"/>
+                    <constraint firstAttribute="trailing" secondItem="Sia-rn-Xuz" secondAttribute="trailing" constant="53" id="nmt-Iy-ZyS"/>
+                    <constraint firstAttribute="trailing" secondItem="wyD-7a-Ufr" secondAttribute="trailing" constant="11" id="pEu-gy-mkL"/>
+                    <constraint firstItem="NRf-af-AHN" firstAttribute="top" secondItem="Sia-rn-Xuz" secondAttribute="bottom" constant="31" id="scA-9G-fzX"/>
+                    <constraint firstItem="NRf-af-AHN" firstAttribute="width" secondItem="B1u-J8-znz" secondAttribute="width" constant="-11" id="uQH-T1-H2A"/>
+                    <constraint firstItem="mkc-zF-mJ8" firstAttribute="top" secondItem="B1u-J8-znz" secondAttribute="top" id="vga-YF-eKL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="36" y="162"/>
+        </tableViewCell>
+    </objects>
+</document>

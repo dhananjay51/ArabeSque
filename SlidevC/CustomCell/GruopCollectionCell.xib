@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeui_3.ttf">
+            <string>SegoeUI</string>
+        </array>
+        <array key="seguisb_3.ttf">
+            <string>SegoeUI-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GruopCollectionCell" id="gTV-IL-0wX" customClass="GruopCollectionCell" customModule="ArabeSque" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="164"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="186" height="164"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reviewgroup" translatesAutoresizingMaskIntoConstraints="NO" id="5JB-Dw-WCx">
+                        <rect key="frame" x="0.0" y="0.0" width="186" height="104"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.76078431369999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="104" id="ZgU-Es-6AU"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileholder" translatesAutoresizingMaskIntoConstraints="NO" id="JK6-mf-8bg">
+                        <rect key="frame" x="20" y="72" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="MQt-8V-YFC"/>
+                            <constraint firstAttribute="width" constant="50" id="e35-kn-8XQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JONH BIRTHDAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7E-MJ-Mtr">
+                        <rect key="frame" x="8" y="121" width="106.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="lyr-tG-3t8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feb 28 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXS-o6-AgU">
+                        <rect key="frame" x="13" y="137" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="38t-lX-h1U"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="297" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNF-AN-lgC">
+                        <rect key="frame" x="141.5" y="136" width="21.5" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="ywh-ce-pwS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="aNF-AN-lgC" firstAttribute="top" secondItem="5JB-Dw-WCx" secondAttribute="bottom" constant="32" id="1qw-Bu-vG2"/>
+                <constraint firstItem="5JB-Dw-WCx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FEm-f4-UBd"/>
+                <constraint firstItem="5JB-Dw-WCx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OQJ-cB-KzI"/>
+                <constraint firstItem="JK6-mf-8bg" firstAttribute="top" secondItem="5JB-Dw-WCx" secondAttribute="bottom" constant="-32" id="Sn2-GP-vmE"/>
+                <constraint firstItem="JXS-o6-AgU" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="13" id="UXX-AG-L8x"/>
+                <constraint firstItem="i7E-MJ-Mtr" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="8" id="a1e-OU-qCA"/>
+                <constraint firstItem="i7E-MJ-Mtr" firstAttribute="top" secondItem="5JB-Dw-WCx" secondAttribute="bottom" constant="17" id="aO9-iW-uLC"/>
+                <constraint firstItem="JXS-o6-AgU" firstAttribute="top" secondItem="i7E-MJ-Mtr" secondAttribute="bottom" constant="-5" id="avz-jd-NWS"/>
+                <constraint firstAttribute="trailing" secondItem="5JB-Dw-WCx" secondAttribute="trailing" id="cr1-Da-R1v"/>
+                <constraint firstAttribute="trailing" secondItem="aNF-AN-lgC" secondAttribute="trailing" constant="23" id="qtZ-lY-2Ep"/>
+                <constraint firstItem="JK6-mf-8bg" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="xLt-SL-O8m"/>
+                <constraint firstItem="5JB-Dw-WCx" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zOJ-ih-Uq6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="186" height="164"/>
+            <connections>
+                <outlet property="logo" destination="5JB-Dw-WCx" id="TRo-N5-8hL"/>
+                <outlet property="personimge" destination="JK6-mf-8bg" id="7r6-Df-e2N"/>
+                <outlet property="star" destination="aNF-AN-lgC" id="Jbe-bj-HNf"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="140"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="profileholder" width="32" height="32"/>
+        <image name="reviewgroup" width="187" height="152"/>
+    </resources>
+</document>

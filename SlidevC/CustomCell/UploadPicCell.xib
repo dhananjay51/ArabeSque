@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeui_3.ttf">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UploadPicCell" rowHeight="201" id="KGk-i7-Jjw" customClass="UploadPicCell" customModule="ArabeSque" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="200.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Pics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7J3-27-uTI">
+                        <rect key="frame" x="14" y="11" width="72.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="G6o-gs-9Pi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadcover" translatesAutoresizingMaskIntoConstraints="NO" id="YMx-tE-JBb">
+                        <rect key="frame" x="16" y="40" width="139" height="90"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="BC4-Kt-bfQ"/>
+                            <constraint firstAttribute="width" constant="139" id="MHZ-eS-N6G"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="515-rp-RtP">
+                        <rect key="frame" x="74" y="70" width="30" height="34"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadprofile" translatesAutoresizingMaskIntoConstraints="NO" id="pGw-ru-t2r">
+                        <rect key="frame" x="199" y="40" width="105" height="90"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="105" id="8tL-9U-Fio"/>
+                            <constraint firstAttribute="height" constant="90" id="A5u-Wx-1jm"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DH-c7-tFA">
+                        <rect key="frame" x="232" y="66" width="38" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="N7z-Qc-cpy"/>
+                            <constraint firstAttribute="height" constant="38" id="P0L-MV-wMl"/>
+                        </constraints>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cover Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="961-ig-THU">
+                        <rect key="frame" x="36" y="140" width="77" height="19"/>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PickPhoto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibe-zM-wi6">
+                        <rect key="frame" x="207.5" y="140" width="62" height="19"/>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The maximum Size Of image is  1Mb__ The Image resolulation  should be 1024* 512 px" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeU-hQ-lDQ">
+                        <rect key="frame" x="16" y="165" width="247" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="qs0-s4-Hi8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="11"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YMx-tE-JBb" firstAttribute="top" secondItem="515-rp-RtP" secondAttribute="bottom" constant="-64" id="38A-WC-1zE"/>
+                    <constraint firstItem="YMx-tE-JBb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="A4s-Qf-1VW"/>
+                    <constraint firstItem="961-ig-THU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="36" id="Fwm-Vm-2vR"/>
+                    <constraint firstItem="pGw-ru-t2r" firstAttribute="top" secondItem="YMx-tE-JBb" secondAttribute="top" id="Ih5-kZ-6Vf"/>
+                    <constraint firstItem="7J3-27-uTI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="TFF-1d-rgi"/>
+                    <constraint firstItem="XeU-hQ-lDQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ufb-KR-PBB"/>
+                    <constraint firstItem="YMx-tE-JBb" firstAttribute="top" secondItem="7J3-27-uTI" secondAttribute="bottom" constant="8" id="X8E-2J-bM1"/>
+                    <constraint firstAttribute="trailing" secondItem="XeU-hQ-lDQ" secondAttribute="trailing" constant="57" id="Z2u-li-ajC"/>
+                    <constraint firstItem="961-ig-THU" firstAttribute="top" secondItem="YMx-tE-JBb" secondAttribute="bottom" constant="10" id="aDm-f3-7CH"/>
+                    <constraint firstItem="pGw-ru-t2r" firstAttribute="leading" secondItem="YMx-tE-JBb" secondAttribute="trailing" constant="44" id="aFH-oW-xwg"/>
+                    <constraint firstItem="961-ig-THU" firstAttribute="centerY" secondItem="ibe-zM-wi6" secondAttribute="centerY" id="hyT-f6-gLa"/>
+                    <constraint firstItem="YMx-tE-JBb" firstAttribute="leading" secondItem="515-rp-RtP" secondAttribute="trailing" constant="-88" id="m8O-kX-PWV"/>
+                    <constraint firstItem="7J3-27-uTI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="mf0-KO-h0m"/>
+                    <constraint firstItem="ibe-zM-wi6" firstAttribute="leading" secondItem="961-ig-THU" secondAttribute="trailing" constant="94.5" id="nyQ-i1-2sv"/>
+                    <constraint firstItem="9DH-c7-tFA" firstAttribute="leading" secondItem="YMx-tE-JBb" secondAttribute="trailing" constant="77" id="vKo-vo-YU1"/>
+                    <constraint firstItem="XeU-hQ-lDQ" firstAttribute="top" secondItem="961-ig-THU" secondAttribute="bottom" constant="6" id="wDT-zJ-6zC"/>
+                    <constraint firstItem="9DH-c7-tFA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="66" id="wk8-aC-GbP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="32" y="170.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="uploadcover" width="128" height="65"/>
+        <image name="uploadprofile" width="88" height="65"/>
+    </resources>
+</document>

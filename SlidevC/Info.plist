@@ -4,8 +4,14 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIcons</key>
+	<dict/>
+	<key>CFBundleIcons~ipad</key>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -16,10 +22,80 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>twitterkit-WiK3P7TDtDJl9Vr9BVBWfUqr1</string>
+            </array>
+        </dict>
+       
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb196061091111310</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.638126905039-a0foariqsmc94teaujtjch6npjg4e2fv</string>
+			</array>
+		</dict>
+        
+        
+		
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>196061091111310</string>
+	<key>FacebookDisplayName</key>
+	<string>ArabeSque</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.social-networking</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+		<string>twitter</string>
+		<string>twitterauth</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	
+	<key>UIAppFonts</key>
+	<array>
+		<string>segoeuiz_3.ttf</string>
+		<string>segoeprb_0.ttf</string>
+		<string>segoeuisl_1.ttf</string>
+		<string>segoeuib_3.ttf</string>
+		<string>seguisbi_1.ttf</string>
+		<string>seguisli_1.ttf</string>
+		<string>segoeui_3.ttf</string>
+		<string>segoepr_0.ttf</string>
+		<string>seguibli_1.ttf</string>
+		<string>seguibl_1.ttf</string>
+		<string>segoescb_0.ttf</string>
+		<string>seguisb_3.ttf</string>
+		<string>segoeuil_3.ttf</string>
+		<string>seguisym_0.ttf</string>
+		<string>segoeuii_3.ttf</string>
+		<string>segoesc_0.ttf</string>
+		<string>seguili_1.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -31,8 +107,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

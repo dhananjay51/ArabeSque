@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCategoryCell" rowHeight="178" id="KGk-i7-Jjw" customClass="EventCategoryCell" customModule="ArabeSque" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="177.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wj2-1P-sTi">
+                        <rect key="frame" x="8" y="6" width="93.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="mtb-tz-FjY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmg-mg-dJt" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                        <rect key="frame" x="10" y="29" width="300" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="sVt-9X-hEU"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value=" "/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="RightImage" value="dropdown"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPG-Bd-ZNU">
+                        <rect key="frame" x="10" y="109" width="300" height="63"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JxD-zB-3ZS" customClass="GrowingTextView" customModule="GrowingTextView">
+                                <rect key="frame" x="0.0" y="8" width="300" height="55"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="ls5-TS-jhV"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Your Text (Upto 50 Worlds)"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="XHD-qq-hBG"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JxD-zB-3ZS" secondAttribute="trailing" id="bHn-Gm-F50"/>
+                            <constraint firstAttribute="height" constant="63" id="nBQ-PN-Rf7"/>
+                            <constraint firstItem="JxD-zB-3ZS" firstAttribute="top" secondItem="dPG-Bd-ZNU" secondAttribute="top" constant="8" id="oAG-bJ-ybs"/>
+                            <constraint firstItem="JxD-zB-3ZS" firstAttribute="leading" secondItem="dPG-Bd-ZNU" secondAttribute="leading" id="w5j-9I-Vy1"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Descioption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeD-rA-9hc">
+                        <rect key="frame" x="13" y="91" width="117" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="gLD-Vz-pex"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bmg-mg-dJt" firstAttribute="top" secondItem="wj2-1P-sTi" secondAttribute="bottom" constant="2" id="9r5-Rg-Phz"/>
+                    <constraint firstItem="wj2-1P-sTi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="EuJ-DS-KPB"/>
+                    <constraint firstItem="zeD-rA-9hc" firstAttribute="leading" secondItem="bmg-mg-dJt" secondAttribute="leading" constant="3" id="Hq8-I6-Qhe"/>
+                    <constraint firstItem="zeD-rA-9hc" firstAttribute="top" secondItem="bmg-mg-dJt" secondAttribute="bottom" constant="21" id="SD2-ov-TB8"/>
+                    <constraint firstItem="wj2-1P-sTi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Vqb-Mr-13A"/>
+                    <constraint firstAttribute="trailing" secondItem="bmg-mg-dJt" secondAttribute="trailing" constant="10" id="W9v-35-5Zd"/>
+                    <constraint firstItem="bmg-mg-dJt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="YHi-ZZ-7e7"/>
+                    <constraint firstItem="dPG-Bd-ZNU" firstAttribute="top" secondItem="zeD-rA-9hc" secondAttribute="bottom" constant="-3" id="qCj-t6-TKl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="dPG-Bd-ZNU" secondAttribute="trailing" constant="10" id="ZxE-7C-sAl"/>
+                <constraint firstItem="dPG-Bd-ZNU" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="10" id="kat-hp-gte"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="Category" destination="bmg-mg-dJt" id="M1y-LO-Txg"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="159"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dropdown" width="9" height="9"/>
+    </resources>
+</document>
