@@ -14,7 +14,7 @@ class LoginViewModel: NSObject {
     var password: String = ""
     var checmaark: String = ""
     var completion: Completion?
-    
+    //ModelClass
     
     init(model: LoginModel?) {
         if let mod = model {
