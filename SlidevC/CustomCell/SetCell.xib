@@ -48,6 +48,7 @@
                         <color key="onTintColor" red="0.1764705882" green="0.73333333329999995" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </switch>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="5vy-6d-hSF" firstAttribute="leading" secondItem="79P-FY-7eZ" secondAttribute="leading" id="0qb-Ej-AC6"/>
                     <constraint firstItem="5vy-6d-hSF" firstAttribute="height" secondItem="79P-FY-7eZ" secondAttribute="height" id="6Rn-PG-QrD"/>

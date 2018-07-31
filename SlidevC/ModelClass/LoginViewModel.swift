@@ -54,11 +54,11 @@ class LoginViewModel: NSObject {
     
     func loginRequeste(){
         
-        let loginurl: String = APPURL.signIn
-        let logindict: [String: String] = ["UserEmail":useremail,"UserPassword":password,"AgreeTermsChecked":checmaark]
+     let loginurl: String = APPURL.signIn
+    let logindict: [String: String] = ["UserEmail":useremail,"UserPassword":password,"AgreeTermsChecked":checmaark]
           ServerHit.sharedInstance.PostApi(dict: logindict, Url: loginurl) { (responseData, response)  in
            
-            switch response {
+           switch response {
             case .success:
                 print(responseData)
                 if responseData != nil {

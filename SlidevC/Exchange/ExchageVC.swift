@@ -47,7 +47,11 @@ class ExchageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UI
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
         
-        if    Exchange_List.count == 0
+         NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfItemNotification(notification:)), name: Notification.Name("Search"), object: nil)
+        
+          NotificationCenter.default.addObserver(self, selector: #selector(self.ReloadItemNotification(notification:)), name: Notification.Name("Final"), object: nil)
+        
+        if   Exchange_List.count == 0
         {
           displayAlertView.displayFullViewActivityIndicator(self.view)
               getExchnageList(pi: ExhangeListPageIndex, Sub: Subtitle)
@@ -61,6 +65,34 @@ class ExchageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @objc func methodOfItemNotification(notification: Notification)
+    
+    {
+       is_requesting = false
+        is_data_finished_fromServer = false
+        
+            Exchange_List = []
+         let title = notification.userInfo?["Search"] as? String
+        
+     
+          getExchnageList(pi: 1, Sub:  Subtitle, Search: title!)
+        
+         
+        
+    }
+    
+    @objc func ReloadItemNotification(notification: Notification)
+        
+        
+    { 
+        Exchange_List = []
+        is_requesting = false
+        is_data_finished_fromServer = false
+         getExchnageList(pi: 1, Sub: Subtitle)
+        
+    }
+    
+    
     func dynamicButtonCreation() {
         
         ScrollView.isScrollEnabled = true
@@ -233,7 +265,12 @@ class ExchageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC")as? DetailVC
-        vc?.Exchangedata = Exchange_List [indexPath.row]
+         vc?.Exchangedata = Exchange_List [indexPath.row]
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.SelectController = "Ex"
+        
+        
+        
         self.navigationController?.pushViewController(vc!, animated: true)
         
     }
@@ -296,8 +333,9 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
                 self.exchangeTable.tableFooterView = ViewUtils.getTableFooterLoaderView()
             }
        
+            
         
-         let url = APPURL.Exchange + "T=1008&pi=\(pi)&ty=\(Sub)&searchPhrase=&my=true&SortBy=Latest"
+         let url = APPURL.Exchange + "T=1008&pi=\(pi)&ty=\(Sub)&searchPhrase=&my=false&SortBy=Latest"
         
       
         
@@ -362,6 +400,80 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
         }
     
     
+    private func getExchnageList(pi:Int, Sub:String,Search:String)
+    {
+        
+        
+        if is_requesting == false && is_data_finished_fromServer == false
+        {
+            is_requesting  = true
+            if Exchange_List.count > 0 {
+                self.exchangeTable.tableFooterView = ViewUtils.getTableFooterLoaderView()
+            }
+        
+    let url = APPURL.Exchange + "T=1008&pi=\(pi)&ty=\(Sub)&searchPhrase=\(Search)&my=false&SortBy=Latest"
+    
+    
+    
+    let newTodo: [String: String] = [:]
+    ServerHit.sharedInstance.GetApi(Dict: newTodo, Url: url) { (responseData, error)  in
+    displayAlertView.removeFullViewActivityIndicator(self.view)
+    
+    DispatchQueue.main.async{
+    self.is_requesting  = false
+    
+    let data =  responseData
+    
+    
+    if let json:JSON =  JSON(responseData)
+    
+    {
+    self.ExhangeListPageIndex = self.ExhangeListPageIndex + 1
+    
+    let ApiList = json.dictionary
+    
+    if let DataArr = json["data"].array{
+    
+    
+    if DataArr.count == 0 {
+    
+    self.is_data_finished_fromServer = true
+    }
+    
+    
+    for ApiJSON in DataArr {
+    
+    let api = ExchangeModel.init()
+    
+    api.setJson(json: ApiJSON)
+    self.Exchange_List.append(api)
+    
+    }
+    
+    
+    }
+    
+    self.exchangeTable.dataSource = self
+    self.exchangeTable.delegate = self
+    self.exchangeTable.reloadData()
+    self.exchangeTable.tableFooterView = nil
+    
+    }
+    
+    
+    }
+    
+    
+    
+    }
+    
+    
+}
+
+else{
+    print("unable to fetch some broker list")
+}
+}
         
 }
 

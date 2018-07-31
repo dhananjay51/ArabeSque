@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,27 +25,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="06_Timeline" translatesAutoresizingMaskIntoConstraints="NO" id="WOy-xU-Xc3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="164" id="AIA-tg-tZR"/>
+                            <constraint firstAttribute="height" constant="179" id="AIA-tg-tZR"/>
                         </constraints>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileholder" translatesAutoresizingMaskIntoConstraints="NO" id="QtG-va-ENV">
-                        <rect key="frame" x="146" y="147" width="32" height="32"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wI7-A6-2PN">
-                        <rect key="frame" x="137" y="172" width="54" height="14"/>
+                        <rect key="frame" x="145" y="193.5" width="30" height="32"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="54" id="Bkp-5L-tEq"/>
-                        </constraints>
                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
                         <state key="normal" title="Edit">
                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug3-uB-gJD">
-                        <rect key="frame" x="266" y="134" width="54" height="30"/>
+                        <rect key="frame" x="266" y="150" width="54" height="30"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="54" id="ObB-Eq-qcp"/>
@@ -57,19 +50,24 @@
                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileholder" translatesAutoresizingMaskIntoConstraints="NO" id="QtG-va-ENV">
+                        <rect key="frame" x="130" y="138" width="60" height="68"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="68" id="2vi-pr-Def"/>
+                            <constraint firstAttribute="width" constant="60" id="qka-9t-8bu"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ug3-uB-gJD" firstAttribute="trailing" secondItem="WOy-xU-Xc3" secondAttribute="trailing" id="08i-3r-Una"/>
                     <constraint firstItem="WOy-xU-Xc3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2W6-PR-gTf"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="wI7-A6-2PN" secondAttribute="bottom" constant="24" id="9jV-Tm-zdU"/>
+                    <constraint firstItem="QtG-va-ENV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="138" id="6KR-Ot-Og2"/>
                     <constraint firstItem="WOy-xU-Xc3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9y7-9t-tmD"/>
-                    <constraint firstItem="wI7-A6-2PN" firstAttribute="bottom" secondItem="QtG-va-ENV" secondAttribute="bottom" constant="7" id="CXZ-k4-kzN"/>
-                    <constraint firstItem="ug3-uB-gJD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="134" id="EUU-2o-Bos"/>
-                    <constraint firstItem="QtG-va-ENV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="2" id="Kpm-c8-fMm"/>
-                    <constraint firstItem="wI7-A6-2PN" firstAttribute="top" secondItem="WOy-xU-Xc3" secondAttribute="bottom" constant="8" id="Xbr-yD-TCP"/>
+                    <constraint firstItem="ug3-uB-gJD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="150" id="EUU-2o-Bos"/>
+                    <constraint firstItem="wI7-A6-2PN" firstAttribute="top" secondItem="QtG-va-ENV" secondAttribute="bottom" constant="-12.5" id="EWe-td-xDE"/>
                     <constraint firstAttribute="trailing" secondItem="WOy-xU-Xc3" secondAttribute="trailing" id="cry-UU-Ci0"/>
-                    <constraint firstItem="wI7-A6-2PN" firstAttribute="centerX" secondItem="QtG-va-ENV" secondAttribute="centerX" constant="2" id="h8c-lp-6Bd"/>
-                    <constraint firstItem="QtG-va-ENV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="147" id="jhQ-7i-Zre"/>
+                    <constraint firstItem="wI7-A6-2PN" firstAttribute="centerX" secondItem="QtG-va-ENV" secondAttribute="centerX" id="kcK-E2-66g"/>
+                    <constraint firstItem="QtG-va-ENV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="tXb-PC-ZGl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

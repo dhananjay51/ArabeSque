@@ -112,6 +112,11 @@
 		41C8E1C920FCC99900D6E798 /* ServerHit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8E1C820FCC99900D6E798 /* ServerHit.swift */; };
 		41D108CD210B28B8002BFB76 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D108CC210B28B8002BFB76 /* CountryModel.swift */; };
 		41D108CF210B2911002BFB76 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D108CE210B2911002BFB76 /* CityModel.swift */; };
+		41E3E99C21103DA000739F88 /* ChangePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E3E99B21103DA000739F88 /* ChangePasswordModel.swift */; };
+		41E3E99E21103F8200739F88 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E3E99D21103F8200739F88 /* ChangePasswordViewModel.swift */; };
+		41E3E9A021105C2400739F88 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E3E99F21105C2400739F88 /* ForgotPasswordViewModel.swift */; };
+		41E3E9A32110685C00739F88 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E3E9A12110685C00739F88 /* SettingCell.swift */; };
+		41E3E9A42110685C00739F88 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41E3E9A22110685C00739F88 /* SettingCell.xib */; };
 		41F61E3420E633A00016D43F /* LinkedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F61E3320E633A00016D43F /* LinkedVC.swift */; };
 		521D2CC320DF9C8F00DE77E5 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D2CC120DF9C8F00DE77E5 /* NotificationCell.swift */; };
 		521D2CC420DF9C8F00DE77E5 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521D2CC220DF9C8F00DE77E5 /* NotificationCell.xib */; };
@@ -276,6 +281,11 @@
 		41C8E1C820FCC99900D6E798 /* ServerHit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerHit.swift; sourceTree = "<group>"; };
 		41D108CC210B28B8002BFB76 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		41D108CE210B2911002BFB76 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		41E3E99B21103DA000739F88 /* ChangePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordModel.swift; sourceTree = "<group>"; };
+		41E3E99D21103F8200739F88 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		41E3E99F21105C2400739F88 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		41E3E9A12110685C00739F88 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		41E3E9A22110685C00739F88 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		41F61E2E20E6278B0016D43F /* li-ios-sdk-1.0.7-release */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "li-ios-sdk-1.0.7-release"; path = "../../Downloads/li-ios-sdk-1.0.7-release"; sourceTree = "<group>"; };
 		41F61E3320E633A00016D43F /* LinkedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedVC.swift; sourceTree = "<group>"; };
 		521D2CC120DF9C8F00DE77E5 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
@@ -477,6 +487,8 @@
 				412EB4AD20DE798400896DD0 /* SetCell.xib */,
 				521D2CC120DF9C8F00DE77E5 /* NotificationCell.swift */,
 				521D2CC220DF9C8F00DE77E5 /* NotificationCell.xib */,
+				41E3E9A12110685C00739F88 /* SettingCell.swift */,
+				41E3E9A22110685C00739F88 /* SettingCell.xib */,
 				412EB49620DE523500896DD0 /* AraveWallCell.swift */,
 				412EB49720DE523500896DD0 /* AraveWallCell.xib */,
 				52593CBE20DA551F00C23F94 /* ImageCell.swift */,
@@ -591,6 +603,9 @@
 				413DB35D21072D13001A54AF /* WallModel.swift */,
 				41D108CC210B28B8002BFB76 /* CountryModel.swift */,
 				41D108CE210B2911002BFB76 /* CityModel.swift */,
+				41E3E99B21103DA000739F88 /* ChangePasswordModel.swift */,
+				41E3E99D21103F8200739F88 /* ChangePasswordViewModel.swift */,
+				41E3E99F21105C2400739F88 /* ForgotPasswordViewModel.swift */,
 			);
 			path = ModelClass;
 			sourceTree = "<group>";
@@ -794,6 +809,7 @@
 				5238847920DED01700405C04 /* segoeprb_0.ttf in Resources */,
 				412EB49920DE523500896DD0 /* AraveWallCell.xib in Resources */,
 				5225927A20D98E4900E47B12 /* Main.storyboard in Resources */,
+				41E3E9A42110685C00739F88 /* SettingCell.xib in Resources */,
 				412EB4AF20DE798400896DD0 /* SetCell.xib in Resources */,
 				5238848720DED01700405C04 /* segoesc_0.ttf in Resources */,
 				4197726120DCE24600917EF3 /* ExchangeCollectionCell.xib in Resources */,
@@ -973,6 +989,7 @@
 				41263FDF20FF4897009FC361 /* MSSingalton.swift in Sources */,
 				41C8E1C620FCC94F00D6E798 /* String+Validater.swift in Sources */,
 				41C49AE120E3569400CFC69F /* CustomTabBar.swift in Sources */,
+				41E3E99E21103F8200739F88 /* ChangePasswordViewModel.swift in Sources */,
 				41263FD320FF1083009FC361 /* ExchangeViewModel.swift in Sources */,
 				4134D5652101FE0C0056009C /* DetailVC.swift in Sources */,
 				522339A01FF9B87C00FD6210 /* GroupCell.swift in Sources */,
@@ -986,8 +1003,10 @@
 				4126FFAE20E0DB450043534E /* WorkExpCell.swift in Sources */,
 				412A782920FDDD1D00CA2DF2 /* UIViewController+Alert.swift in Sources */,
 				411D3CD820E2058300D472B8 /* WallbannnerCell.swift in Sources */,
+				41E3E99C21103DA000739F88 /* ChangePasswordModel.swift in Sources */,
 				415C79B620E3AE0C00B3A34A /* GroupDetailVC.swift in Sources */,
 				5225928720D98EB500E47B12 /* HomevC.swift in Sources */,
+				41E3E9A32110685C00739F88 /* SettingCell.swift in Sources */,
 				412EB49D20DE5AC100896DD0 /* ArabwallVC.swift in Sources */,
 				412A781220FDAF5B00CA2DF2 /* LoginViewModel.swift in Sources */,
 				411D3CE220E206B500D472B8 /* Regroup.swift in Sources */,
@@ -1010,6 +1029,7 @@
 				412A784120FE06E300CA2DF2 /* MMMaterialDesignSpinner.m in Sources */,
 				412EB48E20DE181300896DD0 /* UploadPicCell.swift in Sources */,
 				41335CF12100544F00119EA8 /* PeopleModel.swift in Sources */,
+				41E3E9A021105C2400739F88 /* ForgotPasswordViewModel.swift in Sources */,
 				412A782120FDBA9D00CA2DF2 /* ViewConstant.swift in Sources */,
 				5223399C1FF9B42100FD6210 /* ExchangeCell.swift in Sources */,
 				412EB4A720DE707000896DD0 /* ReferFriendVC.swift in Sources */,

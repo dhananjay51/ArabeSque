@@ -28,6 +28,9 @@ class SettingVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         nib = UINib.init(nibName: "SetCell", bundle: nil)
         self.menuTable.register(nib, forCellReuseIdentifier: "SetCell")
+        nib = UINib.init(nibName: "SettingCell", bundle: nil)
+        self.menuTable.register(nib, forCellReuseIdentifier: "SettingCell")
+
         
         let customButton = UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: self, action: #selector(backButtonTapped)) //
         self.navigationItem.leftBarButtonItem  = customButton
@@ -65,7 +68,7 @@ class SettingVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 func numberOfSections(in tableView: UITableView) -> Int {
     
     // #warning Incomplete implementation, return the number of sections
-    return 3
+    return 4
     
 }
 
@@ -80,8 +83,12 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
         
         return 1
     }
-    else{
+    if section==2{
+        
         return 3
+    }
+    else{
+        return 1
     }
 }
 
@@ -90,7 +97,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     if indexPath.section==0{
         
         let cell = self.menuTable.dequeueReusableCell(withIdentifier: "UserSetCell") as!UserSetCell
-        
+          cell.selectionStyle = .none
         return cell
     }
     
@@ -98,20 +105,48 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     {
         let cell = self.menuTable.dequeueReusableCell(withIdentifier: "NotificationCell") as! NotificationCell
         //cell.itemName?.text = itemarr[indexPath.row] as? String
-       
+         cell.selectionStyle = .none
         return cell
         
     }
-    else{
-        let cell = self.menuTable.dequeueReusableCell(withIdentifier: "SetCell") as! SetCell
         
+  if indexPath.section==2
+  { let cell = self.menuTable.dequeueReusableCell(withIdentifier: "SetCell") as! SetCell
+      cell.selectionStyle = .none
+    return cell
+    
+  }
+    else{
+        let cell = self.menuTable.dequeueReusableCell(withIdentifier: "SettingCell") as! SettingCell
+         cell.name.text = "Changepassword"
+      cell.selectionStyle = .none
         return cell
         
     }
     
     
 }
-
+    func   tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        if indexPath.section==0
+        {
+            return
+        }
+        if indexPath.section==1
+        {
+            return
+        }
+        if indexPath.section==2
+        {
+            return
+        }
+        else {
+            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVC")
+            self.navigationController?.pushViewController(vc!, animated:true)
+        }
+        
+    }
 
 func  tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     
@@ -123,12 +158,18 @@ func  tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -
     {
         return 110.0
     }
+    if indexPath.section==2
+    {
+        return 88.0
+    }
     else {
-        return 84.0
+        return 52.0
     }
     
     
     
 }
-
+func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 4
+    }
 }

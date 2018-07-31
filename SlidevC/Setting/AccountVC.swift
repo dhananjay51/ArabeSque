@@ -212,7 +212,7 @@ class AccountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
 }
     @IBAction func UpdatePasswordButton(_ sender: Any) {
         
-        let passwordvc = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordVC
+        let passwordvc = self.storyboard?.instantiateViewController(withIdentifier: "EquacationVC") as! EquacationVC
         self.navigationController?.pushViewController(passwordvc, animated: true)
         
     }

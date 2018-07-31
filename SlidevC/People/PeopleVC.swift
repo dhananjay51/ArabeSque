@@ -93,6 +93,9 @@ class PeopleVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PeoepleDetailsVC")as! PeoepleDetailsVC
           vc.Peopledata =  People_List[indexPath.row]
+        
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.SelectController = "People"
           self.navigationController?.pushViewController(vc, animated: true)
       
         

@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
     var window: UIWindow?
     var centerContainer: MMDrawerController?
     var Servicebool: Bool?
+    var  SelectController:String?
+    
+    
+    
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print(signIn)
         print(user)

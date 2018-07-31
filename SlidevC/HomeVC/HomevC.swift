@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate {
+class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var Exchnageview: UIView!
     @IBOutlet weak var GroupView: UIView!
@@ -24,18 +24,28 @@ class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate {
      @IBOutlet weak var  Itemtable:UITableView!
      @IBOutlet weak var  MenuView:UIView!
      var checkvalue : String?
+    var searchBar = UISearchBar()
+    
     fileprivate lazy var defaultTabBarHeight = { tabbar.frame.size.height }()
    
   
    
     override func viewDidLoad() {
         super.viewDidLoad()
+         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.SelectController=""
+        searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
+        searchBar.placeholder = "Search"
+        searchBar.isUserInteractionEnabled = false
+         //searchBar.showsCancelButton = true
+        searchBar.tintColor = UIColor.black
+      
         
-        
-        let searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 440, height: 44))
-        searchBar.placeholder = "Search for Places"
         self.navigationItem.titleView = searchBar
-        Exchnageview.isHidden=false
+        
+          searchBar.delegate = self
+        
+         Exchnageview.isHidden=false
         GroupView.isHidden=true
         Peopleview.isHidden=true
         EventView.isHidden=true
@@ -44,6 +54,7 @@ class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate {
         peoplerbtn.isSelected = false
         eventbtn.isSelected = false
         self.tabbar.delegate=self
+        
         tabbar.selectedItem = tabbar.items![2] as UITabBarItem
         tabbar.selectedItem?.title="LISTVIEW"
         
@@ -59,7 +70,7 @@ class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+   override func viewWillAppear(_ animated: Bool) {
         
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         if  appDelegate.Servicebool==true  {
@@ -72,8 +83,97 @@ class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate {
                NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("Indicator"), object: nil)
               Indicator.startAnimating()
         }
+        
+        if appDelegate.SelectController=="Ex" {
+            Exchnageview.isHidden=false
+            GroupView.isHidden=true
+            Peopleview.isHidden=true
+            EventView.isHidden=true
+            extbnt.isSelected = true
+            groupbtn.isSelected = false
+            peoplerbtn.isSelected = false
+            eventbtn.isSelected = false
+            MenuView.isHidden = true
+            tabbar.isHidden = false
+            
+            checkvalue = ""
+            searchBar.isUserInteractionEnabled = true
+            
+            
+            
+        }
+        else  if  appDelegate.SelectController=="People"{
+            
+            
+            Exchnageview.isHidden=true
+            GroupView.isHidden=true
+            Peopleview.isHidden=false
+            EventView.isHidden=true
+            extbnt.isSelected = false
+            groupbtn.isSelected = false
+            peoplerbtn.isSelected = true
+            eventbtn.isSelected = false
+            MenuView.isHidden = true
+            
+            checkvalue = ""
+            searchBar.isUserInteractionEnabled = true
+            
+            
+        }
+    
+        else{
+            print("hello")
+       }
+      
+       
     }
    
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+        
+        
+    }
+    
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.resignFirstResponder()
+        self.view.endEditing(true)
+        
+        if searchBar.text==nil||searchBar.text=="0"
+        {
+            
+        }
+        else{
+            self.view.endEditing(true)
+            
+            NotificationCenter.default.post(name: Notification.Name("Search"), object: nil, userInfo: ["Search":searchBar.text ?? ""])
+        }
+        
+        
+        
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText.count==0 {
+            
+            NotificationCenter.default.post(name: Notification.Name("Final"), object: nil, userInfo: ["Searchbar":searchBar ])
+            
+            
+        }
+        
+        print(searchText)
+        
+    }
     
 @objc func methodOfReceivedNotification(notification: Notification){
     Indicator.stopAnimating()
@@ -115,6 +215,7 @@ class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate {
          tabbar.isHidden = false
        
          checkvalue = ""
+        searchBar.isUserInteractionEnabled = true
 
 
     }
@@ -131,6 +232,7 @@ class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate {
         MenuView.isHidden = true
       
          checkvalue = "group"
+         searchBar.isUserInteractionEnabled = true
 
 
     }
@@ -147,6 +249,7 @@ class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate {
         MenuView.isHidden = true
       
          checkvalue = ""
+         searchBar.isUserInteractionEnabled = true
 
     }
     @IBAction func eventButton(_ sender: Any) {
@@ -162,6 +265,7 @@ class HomevC: UIViewController , UITabBarDelegate, RecommendedDelegate {
         MenuView.isHidden = true
      
           checkvalue = "event"
+         searchBar.isUserInteractionEnabled = true
 
 
     }

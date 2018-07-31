@@ -7,10 +7,12 @@
 //
 
 import UIKit
-
+import SkyFloatingLabelTextField
 class ForgotPVC: UIViewController {
-
+    @IBOutlet weak var Email :SkyFloatingLabelTextField!
+     var  forgotModel = ForgotPasswordViewModel()
     override func viewDidLoad() {
+       
         super.viewDidLoad()
         self.title = "Forgot Password"
          self.navigationController?.navigationBar.isHidden = false
@@ -30,5 +32,27 @@ class ForgotPVC: UIViewController {
      self.navigationController?.popViewController(animated: true)
         
     }
+    @IBAction func ForgotPasswordbtn(_ sender: UIButton){
+        
+        forgotModel.email = Email.text!
+
+       displayAlertView.displayFullViewActivityIndicator(view)
+        
+        forgotModel.requestForgotPassword(completion: {
+            (response) in
+            displayAlertView.removeFullViewActivityIndicator(self.view)
+            switch response {
+            case .success(let msg)://Show alert msg for success
+                AlertController.showAlert(title: Alert.Title.login, message: msg)
+            case .error(let msg)://Show alert msg for failure
+                AlertController.showAlert(title: Alert.Title.login, message: msg)
+                displayAlertView.removeFullViewActivityIndicator(self.view)
+            }
+        })
+        
+        
+    }
+        
+    
 
 }

@@ -69,6 +69,13 @@ struct APPURL
     static var GetItemRecommended: String {
         return baseURL + "Exchange/RecommendedItems?"
     }
-    
+ 
+static  var ChangePasswordUrl: String {
+    return baseURL + "User/ChangePassword?"
+}
+    static  var ResetPasswordUrl: String {
+        return baseURL + "User/PasswordReset?"
+    }
+
 
 }
